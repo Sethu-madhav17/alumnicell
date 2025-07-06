@@ -1,0 +1,121 @@
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./Eventh.css"; // 👈 import your CSS
+
+const events = [
+  {
+    image: "/Media/cv.jpg",
+    title: "CV Review Drive",
+    date: "July 6, 2025",
+    time: "05:00 AM",
+    venue:"IIT Indore",
+  },
+  {
+    image: "/Media/ah.png",
+    title: "Alumni Hour",
+    date: "April, 2025",
+    time: "09:00 AM",
+    venue:"IIT Indore",
+  },
+  {
+    image: "/Media/cmeet1.jpg",
+    title: "Alumni Hour",
+    date: "April 20, 2025",
+    time: "4:30 PM",
+    venue:"IIT Indore",
+  },
+  {
+    image: "/Media/mopus.png",
+    title: "Magnum Opus",
+    date: "Jan 11-12, 2025",
+    time: "9:00 AM",
+    venue:"IIT Indore",
+  },
+  {
+    image: "/Media/cmeet1.jpg",
+    title: "Alumni Hour",
+    date: "April 20, 2025",
+    time: "4:30 PM",
+    venue:"IIT Indore",
+  },
+  {
+    image: "/Media/mopus.png",
+    title: "Magnum Opus",
+    date: "Jan 11-12, 2025",
+    time: "9:00 AM",
+    venue:"IIT Indore",
+  },
+  {
+    image: "/Media/mopus.png",
+    title: "Magnum Opus",
+    date: "Jan 11-12, 2025",
+    time: "9:00 AM",
+    venue:"IIT Indore",
+  },
+];
+
+const Carousel = () => {
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0,
+    speed: 3000,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    cssEase: "linear",
+    pauseOnHover: true,
+  responsive: [
+     {
+    breakpoint: 1604,
+    settings: {
+      slidesToShow: 4,
+    },
+  },
+  {
+    breakpoint: 1604,
+    settings: {
+      slidesToShow: 4,
+    },
+  },
+   {
+    breakpoint: 1000,
+    settings: {
+      slidesToShow: 3,
+    },
+  },
+  
+  
+],
+
+  };
+
+  return (
+    <div className="carousel-container">
+      <Slider {...settings}>
+        {events.map((event, index) => (
+          <div key={index} className="event-slide">
+            <div className="event-card">
+              <img
+                src={event.image}
+                alt={event.title}
+                className="event-image"
+              />
+              <div className="event-content">
+                <h3 className="event-title">{event.title}</h3>
+                <p className="event-date">📅 {event.date}</p>
+                <p className="event-time">⏰ {event.time}</p>
+                <p className="event-venue">📍 {event.venue}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
+
+export default Carousel;
+
+

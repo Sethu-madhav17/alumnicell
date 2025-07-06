@@ -1,0 +1,60 @@
+.carousel-container {
+  width: 100%;
+  height: fit-content;
+  padding-bottom: 2rem;
+}
+
+.event-slide {
+  height: 100%; /* ensure slider item fills height */
+  max-width: 350px;
+  min-width: 90px;
+}
+
+.event-card {
+  background: #BAD1C2;
+  border-radius: 1.5vw;
+  box-shadow: 0 0.8vw 1.5vw rgba(0, 0, 0, 0.1);
+  width: 20vw; /* Fully responsive width */
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.event-card:hover {
+  transform: translateY(-0.6vw);
+  box-shadow: 0 1vw 2.5vw rgba(0, 0, 0, 0.15);
+}
+
+.event-image {
+  display: block;
+  margin-top: 2vw;
+  width: 80%;         /* Keeps image within card */
+  height: 18vw;       /* Fully responsive height */
+  border-radius: 1vw;
+  object-fit: cover;  /* Optional: keeps image nicely filled */
+}
+
+
+.event-content {
+  padding: clamp(8px, 1vw, 16px);
+  /* flex-grow: 1; uncomment if needed */
+}
+
+.event-title {
+  margin: clamp(4px, 0.5vw, 8px);
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
+}
+
+.event-date,
+.event-time,
+.event-venue {
+  margin: 0;
+  font-size: clamp(0.5rem, 1vw, 1rem);
+  color: #555;
+}
+
+
+
