@@ -9,6 +9,9 @@
 
 .program-card {
   background: #BAD1C2;
+ background: url('/Media/instant-settlement-bg.svg'), #4FA095;
+background-repeat: no-repeat;
+background-size: cover;
   border-radius: 1.5vw;
   box-shadow: 0 0.8vw 1.5vw rgba(0, 0, 0, 0.1);
   width: 15vw; /* Fully responsive width */
@@ -22,6 +25,9 @@
 }
 
 .program-card:hover {
+    background: url('/Media/instant-settlement-bghover.svg'),#4FA095;
+    background-repeat: no-repeat;
+background-size: cover;
  transform: translateY(-0.6vw);
   box-shadow: 0 1vw 2.5vw rgba(0, 0, 0, 0.15);
 }

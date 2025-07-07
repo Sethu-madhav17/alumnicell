@@ -6,19 +6,20 @@ import SignUpButton from "../SignupUpButton/SignupUpButton";
 const navLinks = [
   { name: "Home", path: "/" },
   {
-    name: "Alumni",
-    dropdown: [
-      { name: "Alumni Directory", path: "/Alumnidirectory" },
-      { name: "SAATHI", path: "/saathi" },
-    ],
+    name: "KYA", path: "/publications" 
+    
   },
   { name: "Team", path: "/team" },
-  { name: "Publications", path: "/publications" },
+  { name: "Publications",
+    dropdown: [
+      { name: "Newsletter", path: "/Newsletter" },
+      { name: "Magazine", path: "/Magazine" },
+    ],
+  },
   {
-    name: "Events",path: "/events"
+    name: "CV Review",path: "/events"
    
   },
-  { name: "Login", path: "/login" },
 ];
 
 export default function Navbar() {
