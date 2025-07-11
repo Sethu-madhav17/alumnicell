@@ -1,5 +1,23 @@
 import './Introtext.css'
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 const BigQuote = () => {
+    useGSAP(() => {
+		// gsap code here...
+		gsap.from('.introtext', 
+      
+      {
+      opacity: 0,
+      duration: 1.5,
+      ease: 'none',
+
+      }); // <-- automatically reverted
+	},);
   return (
     <div className='mainintrotext'>
       <div className='bro1'>“</div>

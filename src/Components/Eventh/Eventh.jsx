@@ -2,7 +2,13 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "./Eventh.css"; // 👈 import your CSS
+import "./Eventh.css"; 
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const events = [
   {
@@ -91,6 +97,26 @@ const Carousel = () => {
 
   };
 
+    useGSAP(() => {
+      // gsap code here...
+      gsap.from('.carousel-container ', 
+         
+         {
+           y:10,
+         opacity: 0,
+         duration: 0.1,
+         ease: "power1.in",
+         scrollTrigger: {
+           trigger: '.carousel-container',
+           scroller: 'body',
+           start: 'top 40%', // Animation starts when top of the card reaches 60% of the viewport
+           end:'top 50%',
+           scrub:2,
+         } 
+   
+         }); // <-- automatically reverted
+    },);
+  
   return (
     <div className="carousel-container">
       <Slider {...settings}>

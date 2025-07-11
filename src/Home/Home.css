@@ -13,9 +13,11 @@
 
 }
 .titlec{
+
     text-align: center;
     font-size: clamp(0.9rem, 2vw, 5rem);
-    margin: 2REM;
+    margin: 4rem;
+    overflow: hidden;
 }
 
 .content-wrapper {
@@ -32,13 +34,25 @@
   gap: 1.5rem;
 }
 .iitabhi1{
-   display: block;
+  position: relative;
+   animation: float 1s ease-in-out infinite;
     max-width: 450px;
-    max-height: 450px;
+    max-height: 550px;
     border-radius: 20px;
     overflow: hidden;
      box-shadow: 0 4px 12px rgba(0, 0, 0, 2);
 }
+@keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-3px); /* Moves up */
+      }
+      100% {
+        transform: translateY(0); /* Moves back down */
+      }
+    }
 .text{
     /* width: 800px; */
     font-size: 7rem;
@@ -50,8 +64,6 @@
 .text{
     
     font-size: 5rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ffffff;
 }
 .banner{
   clip-path: polygon(0 0, 100% 0, 100% 75%, 85% 90%, 0% 75%);
@@ -63,8 +75,6 @@
 .text{
     
     font-size: 3rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: #ffffff;
 }
 
 
@@ -132,11 +142,27 @@
         0% 75%    /* bottom left */
       );
     }
-  
+
 .saathih{
     display: flex;
     justify-content: center;
     padding: 40px;
+    overflow: hidden;
+}
+.register-button{
+ min-width: 10px;
+font-weight: 550;
+font-size: clamp(7px, 2vw, 20px);
+  background: linear-gradient(75deg, #ff6f00, #f0aa56);
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 13%; /* Position it 20px from the bottom of the screen */
+  left: 56%; /* Horizontally center the button */
+  
 }
 .saathih img {
   min-width: 140px;

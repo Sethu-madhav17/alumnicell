@@ -1,5 +1,11 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import "./ProgramH.css";
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
 
 const programs = [
   {
@@ -33,6 +39,26 @@ const programs = [
 ];
 
 const Program = () => {
+  useGSAP(() => {
+		// gsap code here...
+		gsap.from('.program-container', 
+      
+      {
+        y:50,
+      opacity: 0,
+      duration: 0.1,
+      ease: "power1.in",
+      scrollTrigger: {
+        trigger: '.program-container',
+        scroller: 'body',
+        start: 'top 40%', // Animation starts when top of the card reaches 60% of the viewport
+        end:'top 50%',
+        scrub:2,
+      } 
+
+      }); // <-- automatically reverted
+	},); // <-- scope for selector text (optional)
+
   return (
     <div className="program-container">
       {programs.map((program, index) => (

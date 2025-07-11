@@ -5,7 +5,81 @@ import Introtext from '../Components/Introtext/Introtext'
 import Eventh from '../Components/Eventh/Eventh'
 import Webinar from '../Components/WebinarH/WebinarH'
 import Program from '../Components/ProgramH/ProgramH'
+import { gsap } from 'gsap';
+import { useGSAP } from '@gsap/react';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(useGSAP);
+gsap.registerPlugin(ScrollTrigger);
+
 const Home = () => {
+  useGSAP(() => {
+		// gsap code here...
+		gsap.from('.pr', 
+      
+      {
+      y:50,
+      opacity:0,
+      duration:0.8,
+      delay:0.5,
+      stagger:0.15,
+       scrollTrigger: {
+        trigger: '.pr',
+        scroller: 'body',
+        start: 'top 60%', // Animation starts when top of the card reaches 60% of the viewport
+        end:'top 60%',
+        scrub:2,}
+
+      }); // <-- automatically reverted
+      	gsap.from('.web', 
+      
+      {
+      y:50,
+      opacity:0,
+      duration:0.8,
+      delay:0.5,
+      stagger:0.15,
+       scrollTrigger: {
+        trigger: '.web',
+        scroller: 'body',
+        start: 'top 60%', // Animation starts when top of the card reaches 60% of the viewport
+        end:'top 40%',
+        scrub:2,}
+
+      });
+      gsap.from('.eve', 
+      
+      {
+      y:50,
+      opacity:0,
+      duration:1,
+      delay:1,
+      stagger:0.15,
+       scrollTrigger: {
+        trigger: '.eve',
+        scroller: 'body',
+        start: 'top 40%', // Animation starts when top of the card reaches 60% of the viewport
+        end:'top 40%',
+        scrub:2,}
+
+      });
+      gsap.from('.saathih', 
+      
+      {
+      y:100,
+      opacity:0,
+      duration:1,
+      delay:1,
+      stagger:0.15,
+       scrollTrigger: {
+        trigger: '.saathih',
+        scroller: 'body',
+        start: 'top 80%', // Animation starts when top of the card reaches 60% of the viewport
+        end:'top 40%',
+        scrub:2,}
+
+      });
+	},);
   return (
     <>
     <div className="banner">
@@ -28,13 +102,17 @@ const Home = () => {
     <div className="polygon-main">
     </div>
   </div>
-  <p className='titlec'>PROGRAMS</p>
+  <p className='titlec pr'>PROGRAMS</p>
   <Program/>
-  <p className='titlec'>WEBINARS</p>
+  <p className='titlec web'>WEBINARS</p>
    <Webinar/>
-  <p className='titlec'>EVENTS</p>
+  <p className='titlec eve'>EVENTS</p>
    <Eventh/>
-   <div  className="saathih"><img src='/Media/Saathi1.png' alt='saathi' style={{ borderRadius: "15px" }}></img></div>
+   <div  className="saathih"><img src='/Media/Saathi1.png' alt='saathi' style={{ borderRadius: "15px" }}></img>
+   <button className="register-button">
+        REGISTER NOW
+      </button>
+   </div>
   </>
   )
 }
