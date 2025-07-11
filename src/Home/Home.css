@@ -169,3 +169,19 @@ font-size: clamp(7px, 2vw, 20px);
   max-width: 950px; /* cap it on large screens */
   height: auto;
 }
+.bubble{
+  display: flex;
+  position: absolute;
+  left: 0;
+  justify-items: left;
+  width:20vw;
+  z-index: -1;
+}
+.bubble1{
+  display: flex;
+  position: absolute;
+  right: 0;
+  justify-items: left;
+  width:20vw;
+  z-index: -1;
+}

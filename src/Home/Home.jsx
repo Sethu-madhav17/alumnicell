@@ -102,13 +102,18 @@ const Home = () => {
     <div className="polygon-main">
     </div>
   </div>
+  <img className='bubble' src='/Media/bubble.png'></img>
+    <img className='bubble1' src='/Media/bubble.png'></img>
   <p className='titlec pr'>PROGRAMS</p>
   <Program/>
   <p className='titlec web'>WEBINARS</p>
    <Webinar/>
   <p className='titlec eve'>EVENTS</p>
    <Eventh/>
-   <div  className="saathih"><img src='/Media/Saathi1.png' alt='saathi' style={{ borderRadius: "15px" }}></img>
+
+   <div  className="saathih"> <img className='bubble' src='/Media/bubble.png'></img>
+    <img className='bubble1' src='/Media/bubble.png'></img>
+    <img src='/Media/Saathi1.png' alt='saathi' style={{ borderRadius: "15px" }}></img>
    <button className="register-button">
         REGISTER NOW
       </button>
