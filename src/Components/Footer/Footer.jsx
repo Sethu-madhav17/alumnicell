@@ -55,7 +55,7 @@ const socialIcons = [
 ];
 
 const Footer = () => (
-
+<>
   <footer className="footer">
     <div className="footer2"></div>
     <div className="footer1"><div className="footer-content">
@@ -101,6 +101,8 @@ const Footer = () => (
     </div></div>
     
   </footer>
+  <div className="rights">© 2025 - All Rights with IIT Indore</div>
+  </>
 );
 
 export default Footer;
