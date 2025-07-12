@@ -13,7 +13,8 @@
 }
 
 .event-card {
-  background: #4FA095;
+   background: url('/Media/instant-settlement-bg.svg') no-repeat center center, #4FA095;
+background-size: cover;
   border-radius: 1.5vw;
   box-shadow: 0 0.8vw 1.5vw rgba(0, 0, 0, 0.1);
   width: 20vw; /* Fully responsive width */
@@ -26,6 +27,8 @@
 }
 
 .event-card:hover {
+  background: url('/Media/instant-settlement-bghover.svg') no-repeat center center, #4FA095;
+background-size: cover;
   transform: translateY(-0.6vw);
   box-shadow: 0 1vw 2.5vw rgba(0, 0, 0, 0.15);
 }

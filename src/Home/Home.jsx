@@ -3,7 +3,6 @@ import Typewriter from '../Components/Typewriter/Typewriter'
 import './Home.css'
 import Introtext from '../Components/Introtext/Introtext'
 import Eventh from '../Components/Eventh/Eventh'
-import Webinar from '../Components/WebinarH/WebinarH'
 import Program from '../Components/ProgramH/ProgramH'
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
@@ -31,22 +30,7 @@ const Home = () => {
         scrub:2,}
 
       }); // <-- automatically reverted
-      	gsap.from('.web', 
       
-      {
-      y:50,
-      opacity:0,
-      duration:0.8,
-      delay:0.5,
-      stagger:0.15,
-       scrollTrigger: {
-        trigger: '.web',
-        scroller: 'body',
-        start: 'top 60%', // Animation starts when top of the card reaches 60% of the viewport
-        end:'top 40%',
-        scrub:2,}
-
-      });
       gsap.from('.eve', 
       
       {
@@ -58,8 +42,8 @@ const Home = () => {
        scrollTrigger: {
         trigger: '.eve',
         scroller: 'body',
-        start: 'top 40%', // Animation starts when top of the card reaches 60% of the viewport
-        end:'top 40%',
+        start: 'top 80%', // Animation starts when top of the card reaches 60% of the viewport
+        end:'top 70%',
         scrub:2,}
 
       });
@@ -104,11 +88,9 @@ const Home = () => {
   </div>
   <img className='bubble' src='/Media/bubble.png'></img>
     <img className='bubble1' src='/Media/bubble.png'></img>
-  <p className='titlec pr'>PROGRAMS</p>
+  <p className='titlec pr'>PROGRAM & WEBINARS</p>
   <Program/>
-  <p className='titlec web'>WEBINARS</p>
-   <Webinar/>
-  <p className='titlec eve'>EVENTS</p>
+    <p className='titlec eve'>EVENTS</p>
    <Eventh/>
 
    <div  className="saathih"> <img className='bubble' src='/Media/bubble.png'></img>

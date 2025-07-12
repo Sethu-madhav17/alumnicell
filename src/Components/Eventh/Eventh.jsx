@@ -67,11 +67,12 @@ const Carousel = () => {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 0,
-    speed: 3000,
+    speed: 6000,
     slidesToShow: 4,
     slidesToScroll: 1,
     cssEase: "linear",
     pauseOnHover: true,
+    arrows: false,
   responsive: [
      {
     breakpoint: 1604,
@@ -109,8 +110,8 @@ const Carousel = () => {
          scrollTrigger: {
            trigger: '.carousel-container',
            scroller: 'body',
-           start: 'top 40%', // Animation starts when top of the card reaches 60% of the viewport
-           end:'top 50%',
+           start: 'top 80%', // Animation starts when top of the card reaches 60% of the viewport
+           end:'top 60%',
            scrub:2,
          } 
    

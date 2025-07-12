@@ -1,70 +1,144 @@
+/* Carousel Container */
 .program-container {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  padding: 40px;
-  margin-left: 1vw;
-  margin-right: 1vw;
-   overflow: hidden;
+  position: relative;               /* Required for arrow positioning */
+  width: 100vw;
+  height: fit-content;
+  margin-right: 2rem;
+  padding: 80px;
+  /* box-sizing: border-box; */
+  /* overflow-x: hidden; */
+  gap: 2vw;
 }
 
+/* Each Slide */
+.program-slide {
+   height: 100%; /* ensure slider item fills height */
+  max-width: 350px;
+  min-width: 90px;
+   padding: 50px;
+}
+
+/* Card */
 .program-card {
-  background: #BAD1C2;
- background: url('/Media/instant-settlement-bg.svg'), #4FA095;
-background-repeat: no-repeat;
+ background: url('/Media/instant-settlement-bg.svg') no-repeat center center, #4FA095;
 background-size: cover;
   border-radius: 1.5vw;
   box-shadow: 0 0.8vw 1.5vw rgba(0, 0, 0, 0.1);
-  width: 15vw; /* Fully responsive width */
-   width: 25%;
+  width: 20vw;
   height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
- 
 }
 
 .program-card:hover {
-    background: url('/Media/instant-settlement-bghover.svg'),#4FA095;
-    background-repeat: no-repeat;
+  background: url('/Media/instant-settlement-bghover.svg') no-repeat center center, #4FA095;
 background-size: cover;
- transform: translateY(-0.6vw);
+  transform: translateY(-0.6vw);
   box-shadow: 0 1vw 2.5vw rgba(0, 0, 0, 0.15);
 }
 
+/* Image */
 .program-image {
   display: block;
   margin-top: 2vw;
-  width: 80%;         /* Keeps image within card */
-  height: 18vw;       /* Fully responsive height */
+  width: 80%;
+  height: 18vw;
   border-radius: 1vw;
-  object-fit: cover;  /* Optional: keeps image nicely filled */
+  object-fit: cover;
 }
 
+/* Content */
 .program-content {
- padding: clamp(8px, 1vw, 16px);
-
+  padding: clamp(8px, 1vw, 16px);
 }
 
-.program-content h3 {
- margin: clamp(4px, 0.5vw, 8px);
-  font-size: clamp(0.8rem, 2vw, 2rem);
-  color: #333;
+.program-title {
+  margin: clamp(4px, 0.5vw, 8px);
+  font-size: clamp(0.8rem, 1.2vw, 1.3rem);
   font-weight: bold;
+  color: #fff;
 }
 
-.program-content p {
-   margin: 0;
-  font-size: clamp(0.5rem, 1vw, 1.9rem);
-  color: #555;
+.program-date,
+.program-time,
+.program-venue {
+  margin: 0;
+  font-size: clamp(0.5rem, 1vw, 1rem);
+  color: #f0f0f0;
 }
 
-/* Responsive */
+/* Slick Arrows */
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 60px;
+  height: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+}
 
-@media (max-width: 480px) {
-  .program-container {
-    gap: 10px;
+/* Slick Arrow Icons */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 3rem;
+  color: #4FA095;
+  opacity: 1;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover on Arrows */
+.slick-prev:hover:before,
+.slick-next:hover:before {
+  color: #2d6a57;
+  transform: scale(1.1);
+}
+
+/* Position Arrows Outside */
+.slick-prev {
+  left: -65px;
+}
+
+.slick-next {
+  right: -65px;
+}
+
+/* Responsive Arrow Fix */
+@media (max-width: 768px) {
+  .slick-prev {
+    left: 35%;
+    top: 100%;
   }
-} 
+
+  .slick-next {
+    right: 35%;
+    top: 100%;
+  }
+  .program-container {
+  padding: 5px;
+
+ }
+}
+@media (max-width: 370px) {
+  .slick-prev {
+    left: 20%;
+    top: 120%;
+  }
+
+  .slick-next {
+    right: 20%;
+    top: 120%;
+  }
+  .program-container {
+  margin: 6px;
+  margin-right: 6px;
+  padding: 2px;
+
+ }
+ .program-slide {
+  padding: 10px;
+ }
+}
+
 
