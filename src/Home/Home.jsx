@@ -7,6 +7,8 @@ import Program from '../Components/ProgramH/ProgramH'
 import { gsap } from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Registerbtn from '../Components/Registerbtn/Registerbtn'
+import RegistrationForm from '../Components/RegistrationForm/RegistrationForm'
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -25,11 +27,11 @@ const Home = () => {
        scrollTrigger: {
         trigger: '.pr',
         scroller: 'body',
-        start: 'top 60%', // Animation starts when top of the card reaches 60% of the viewport
+        start: 'top 60%', 
         end:'top 60%',
         scrub:2,}
 
-      }); // <-- automatically reverted
+      }); 
       
       gsap.from('.eve', 
       
@@ -42,7 +44,7 @@ const Home = () => {
        scrollTrigger: {
         trigger: '.eve',
         scroller: 'body',
-        start: 'top 80%', // Animation starts when top of the card reaches 60% of the viewport
+        start: 'top 80%', 
         end:'top 70%',
         scrub:2,}
 
@@ -58,7 +60,7 @@ const Home = () => {
        scrollTrigger: {
         trigger: '.saathih',
         scroller: 'body',
-        start: 'top 80%', // Animation starts when top of the card reaches 60% of the viewport
+        start: 'top 80%',
         end:'top 40%',
         scrub:2,}
 
@@ -96,9 +98,9 @@ const Home = () => {
    <div  className="saathih"> <img className='bubble' src='/Media/bubble.png'></img>
     <img className='bubble1' src='/Media/bubble.png'></img>
     <img src='/Media/Saathi1.png' alt='saathi' style={{ borderRadius: "15px" }}></img>
-   <button className="register-button">
-        REGISTER NOW
-      </button>
+      
+      <Registerbtn/>
+
    </div>
   </>
   )

@@ -6,7 +6,7 @@
 }
 
 .event-slide {
-  height: 100%; /* ensure slider item fills height */
+  height: 100%; 
   max-width: 350px;
   min-width: 90px;
    padding: 50px;
@@ -17,7 +17,7 @@
 background-size: cover;
   border-radius: 1.5vw;
   box-shadow: 0 0.8vw 1.5vw rgba(0, 0, 0, 0.1);
-  width: 20vw; /* Fully responsive width */
+  width: 20vw; 
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -36,10 +36,10 @@ background-size: cover;
 .event-image {
   display: block;
   margin-top: 2vw;
-  width: 80%;         /* Keeps image within card */
-  height: 18vw;       /* Fully responsive height */
+  width: 80%;         
+  height: 18vw;      
   border-radius: 1vw;
-  object-fit: cover;  /* Optional: keeps image nicely filled */
+  object-fit: cover;  
 }
 
 

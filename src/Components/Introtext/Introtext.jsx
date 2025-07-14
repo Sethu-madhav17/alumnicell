@@ -16,7 +16,7 @@ const BigQuote = () => {
       duration: 1.5,
       ease: 'none',
 
-      }); // <-- automatically reverted
+      }); 
 	},);
   return (
     <div className='mainintrotext'>

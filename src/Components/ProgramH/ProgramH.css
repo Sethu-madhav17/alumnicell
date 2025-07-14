@@ -1,6 +1,6 @@
 /* Carousel Container */
 .program-container {
-  position: relative;               /* Required for arrow positioning */
+  position: relative;               
   width: 100vw;
   height: fit-content;
   margin-right: 2rem;
@@ -12,7 +12,7 @@
 
 /* Each Slide */
 .program-slide {
-   height: 100%; /* ensure slider item fills height */
+   height: 100%; 
   max-width: 350px;
   min-width: 90px;
    padding: 50px;
@@ -69,7 +69,7 @@ background-size: cover;
   color: #f0f0f0;
 }
 
-/* Slick Arrows */
+/* Arrows */
 .slick-prev,
 .slick-next {
   z-index: 10;
@@ -79,7 +79,7 @@ background-size: cover;
   transform: translateY(-50%);
 }
 
-/* Slick Arrow Icons */
+/*  Arrow Icons */
 .slick-prev:before,
 .slick-next:before {
   font-size: 3rem;
@@ -95,7 +95,7 @@ background-size: cover;
   transform: scale(1.1);
 }
 
-/* Position Arrows Outside */
+/* Position Arrows */
 .slick-prev {
   left: -65px;
 }
@@ -104,7 +104,6 @@ background-size: cover;
   right: -65px;
 }
 
-/* Responsive Arrow Fix */
 @media (max-width: 768px) {
   .slick-prev {
     left: 35%;
